@@ -35,12 +35,22 @@ module Amorail # :nodoc: all
         )
         load_many(response)
       end 
-    
+
       def find_by_status(s)
         response = client.safe_request(
           :get,
           remote_url('list'),
           status: s
+        )
+        load_many(response)
+      end
+
+      def find_by_lead(l)
+        response = client.safe_request(
+          :get,
+          remote_url('list'),
+          type: 'lead',
+          element_id: l
         )
         load_many(response)
       end
