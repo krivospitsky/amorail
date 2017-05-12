@@ -21,5 +21,11 @@ module Amorail
           links.empty? ? [] : Amorail::Contact.find_all(links.map(&:contact_id))
         end
     end
+
+    # Return list of associated notes
+    def notes
+      fail NotPersisted if id.nil?
+      @notes = Amorail::Note.find_by_lead(id)
+    end
   end
 end

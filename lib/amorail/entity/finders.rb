@@ -35,7 +35,7 @@ module Amorail # :nodoc: all
         )
         load_many(response)
       end 
-
+    
       def find_by_status(s)
         response = client.safe_request(
           :get,
