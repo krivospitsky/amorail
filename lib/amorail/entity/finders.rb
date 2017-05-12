@@ -34,6 +34,15 @@ module Amorail # :nodoc: all
           query: q
         )
         load_many(response)
+      end 
+
+      def find_by_status(s)
+        response = client.safe_request(
+          :get,
+          remote_url('list'),
+          staus: s
+        )
+        load_many(response)
       end
 
       private

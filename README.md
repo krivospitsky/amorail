@@ -121,6 +121,11 @@ You can find any object by id:
 ```ruby
   Amorail::Company.find(company_id)
 ```
+You can find lead object by status:
+
+```ruby
+  Amorail::Lead.find_by_status(status)
+```
 
 Or using query:
 
