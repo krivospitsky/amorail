@@ -40,7 +40,7 @@ module Amorail # :nodoc: all
         response = client.safe_request(
           :get,
           remote_url('list'),
-          staus: s
+          status: s
         )
         load_many(response)
       end
