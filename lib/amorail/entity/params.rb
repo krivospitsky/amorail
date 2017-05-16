@@ -1,3 +1,5 @@
+require 'date'
+
 module Amorail # :nodoc: all
   class Entity
     def params
