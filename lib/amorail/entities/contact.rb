@@ -24,5 +24,10 @@ module Amorail
       return if linked_company_id.nil?
       @company ||= Amorail::Company.find(linked_company_id)
     end
+
+    def notes
+      fail NotPersisted if id.nil?
+      @notes = Amorail::Note.find_by_contact(id)
+    end
   end
 end

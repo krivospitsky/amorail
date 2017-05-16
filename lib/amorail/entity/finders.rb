@@ -55,6 +55,16 @@ module Amorail # :nodoc: all
         load_many(response)
       end
 
+      def find_by_contact(l)
+        response = client.safe_request(
+          :get,
+          remote_url('list'),
+          type: 'contact',
+          element_id: l
+        )
+        load_many(response)
+      end
+
       private
 
       def load_many(response)
