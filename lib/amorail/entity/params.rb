@@ -81,13 +81,10 @@ module Amorail # :nodoc: all
 
       case val
       when String
-        puts "1 #{(date = Time.parse(val)) && date.to_i}"
         (date = Time.parse(val)) && date.to_i
       when Date
-        puts "2 #{val.to_time.to_i}"
         val.to_time.to_i
       else
-        puts "3 #{val.to_i}"
         val.to_i
       end
     end
