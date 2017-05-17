@@ -1,6 +1,5 @@
 require 'faraday'
 require 'faraday_middleware'
-require 'faraday/detailed_logger'
 require 'json'
 require 'active_support'
 
